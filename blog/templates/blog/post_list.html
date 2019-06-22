@@ -3,20 +3,35 @@
     <title>BiaPaints Blog</title>
         </head>
     <body>
-      <div>
-        <h1> Chapter One </h1>
+
+        <div>
+            <h1><a href="/">Chapter One</a> <br>
+            <br></h1>
         </div>
+
+      {% for posts in posts %}
+  <div>
+    <p>{{ post.published_date }} </p>
+    <h2><a href="">{{ post.title }} </a></h2>
+    <p>{{ post.text|linebreaksbr}}</p>
+  </div>
+
+        {% endfor %}
 
         <div>
           <p>published: 22.06.2019, 15:43</P>
             <h2><a href="/">First post </a> </h2>
-            <p> Aki a kicsit nem becsuli, a nagyot nem erdemli. </p>
+            <p> Aki a kicsit nem becsuli, a nagyot nem erdemli.<br>
+              <br>
+              <br>
+          </p>
+
             </div>
 
             <div>
               <p>published: 22.06.2019, 15:48</P>
                 <h3><a href="/">Second post </a> </h3>
-                <p> ajandek </p>
+                <p> Ajandek lonak ne nezd a fogat. </p>
                 </div>
 
     </body>
